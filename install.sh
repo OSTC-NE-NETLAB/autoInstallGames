@@ -32,4 +32,15 @@ wget https://files.freeciv.org/packages/appimage/Freeciv-gtk3.22-3.1.5-x86_64.Ap
 chmod +x Freeciv-gtk3.22-3.1.5-x86_64.AppImage
 printf "[Desktop Entry]\nName=Freeciv\nExec=${CURRENT_DIR}/games/Freeciv-gtk3.22-3.1.5-x86_64.AppImage\nTerminal=false\nType=Application" > /home/$CURRENT_USER/Desktop/Open_Civ.desktop
 
+## Installing 0 a.d
+sudo deb https://deb.debian.org/debian bullseye-backports main
+sudo apt update
+sudo apt install -t bullseye-backports 0ad
+
+## intall endless sky
+wget https://github.com/endless-sky/endless-sky/releases/download/v0.10.12/Endless_Sky-v0.10.12-x86_64.AppImage
+printf "[Desktop Entry]\nName=Endless Sky\nExec=${CURRENT_DIR}/games/v0.10.12/Endless_Sky-v0.10.12-x86_64.AppImage\nTerminal=false\nType=Application" > /home/$CURRENT_USER/Desktop/Endless_Sky.desktop
+chmod +x Endless_Sky-v0.10.12-x86_64.AppImage
+
+sudo apt remove firefox
 
