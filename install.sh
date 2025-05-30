@@ -43,4 +43,5 @@ printf "[Desktop Entry]\nName=Endless Sky\nExec=${CURRENT_DIR}/games/v0.10.12/En
 chmod +x Endless_Sky-v0.10.12-x86_64.AppImage
 
 sudo apt remove firefox
+sudo snap remove firefox
 
