@@ -18,7 +18,7 @@ cd SuperTuxKart-1.4-linux-x86_64
 printf "[Desktop Entry]\nName=Super Tux Racing\nExec=${CURRENT_DIR}/games/SuperTuxKart-1.4-linux-x86_64/run_game.sh\nTerminal=false\nType=Application" > /home/$CURRENT_USER/Desktop/Tux_Racing.desktop
 
 ## install for Battle for Wesnoth
-sudo flatpak install flathub org.wesnoth.Wesnoth
+sudo flatpak install flathub org.wesnoth.Wesnoth -y
 
 ## install and build for OpenRA
 cd "$CURRENT_DIR/games"
@@ -33,15 +33,15 @@ chmod +x Freeciv-gtk3.22-3.1.5-x86_64.AppImage
 printf "[Desktop Entry]\nName=Freeciv\nExec=${CURRENT_DIR}/games/Freeciv-gtk3.22-3.1.5-x86_64.AppImage\nTerminal=false\nType=Application" > /home/$CURRENT_USER/Desktop/Open_Civ.desktop
 
 ## Installing 0 a.d
-sudo deb https://deb.debian.org/debian bullseye-backports main
-sudo apt update
-sudo apt install -t bullseye-backports 0ad
+sudo deb https://deb.debian.org/debian bullseye-backports main -y
+sudo apt update -y
+sudo apt install -t bullseye-backports 0ad -y
 
 ## intall endless sky
 wget https://github.com/endless-sky/endless-sky/releases/download/v0.10.12/Endless_Sky-v0.10.12-x86_64.AppImage
 printf "[Desktop Entry]\nName=Endless Sky\nExec=${CURRENT_DIR}/games/v0.10.12/Endless_Sky-v0.10.12-x86_64.AppImage\nTerminal=false\nType=Application" > /home/$CURRENT_USER/Desktop/Endless_Sky.desktop
 chmod +x Endless_Sky-v0.10.12-x86_64.AppImage
 
-sudo apt remove firefox
-sudo snap remove firefox
+sudo apt remove firefox -y
+sudo snap remove firefox -y
 
